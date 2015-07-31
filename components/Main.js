@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from './Header';
-import Blogpost from './Blogpost';
+import Sidebar from './Sidebar';
+import Content from './Content';
 import Footer from './Footer';
 
 export default class Main {
@@ -10,18 +11,11 @@ export default class Main {
   }
 
   render() {
-    let { blogposts } = this.props;
-
-    blogposts = blogposts.map((post, i) =>
-      <Blogpost key={i} post={post} index={i} />
-    );
-
     return (
       <div style={styles.main}>
         <Header />
-        <div>
-          {blogposts}
-        </div>
+        <Sidebar blogpostsPreview={this.props.blogposts}/>
+        <Content />
         <Footer />
       </div>
     );
@@ -30,6 +24,7 @@ export default class Main {
 
 let styles = {
   main: {
-    fontFamily: 'Lato'
+    fontFamily: 'Lato',
+    clear: 'both'
   }
 }

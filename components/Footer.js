@@ -14,11 +14,13 @@ export default class Footer {
 
 let styles = {
   layout: {
-    height: '100px'
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
+    textAlign: 'center'
   },
-
   footerText: {
-    padding: '5%',
+    padding: '10px',
     fontSize: '10px'
   }
 }
