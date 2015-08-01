@@ -11,7 +11,10 @@ export default class Sidebar {
       <div style={styles.sidebar}>
         <ul>
           { blogpostsPreview = blogpostsPreview.map((post, i) =>
-            <li key={i}>{post.title}</li>
+            <li key={i}>
+              <h3>{post.title}</h3>
+              <span>{post.intro}</span>
+            </li>
           ) }
         </ul>
       </div>
@@ -21,9 +24,11 @@ export default class Sidebar {
 
 let styles = {
   sidebar: {
+    position: 'fixed',
     width: '25%',
     height: '100%',
     float: 'left',
-    backgroundColor: 'whitesmoke'
+    backgroundColor: 'whitesmoke',
+    marginTop: '80px'
   }
 }

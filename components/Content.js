@@ -13,6 +13,8 @@ export default class Content {
 let styles = {
   content: {
     width: '75%',
-    float: 'right'
+    height: '2000px',
+    float: 'right',
+    marginTop: '80px'
   }
 }

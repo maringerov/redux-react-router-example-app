@@ -12,6 +12,8 @@ export default class Header {
 
 let styles = {
   layout: {
+    position: 'fixed',
+    width: '100%',
     height: '80px',
     background: 'linear-gradient(90deg, #1B8895 10%, #4ACDBD 90%)',
     color: 'white'
