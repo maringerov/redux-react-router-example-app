@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import RouteHandler from 'react-router';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Content from './Content';
@@ -18,7 +17,7 @@ export default class Main {
       <div style={styles.main}>
         <Header />
         <Sidebar blogpostsPreview={blogposts}/>
-        <RouteHandler />
+        <Content blogposts={blogposts}/>
         <Footer />
       </div>
     );

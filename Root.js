@@ -33,12 +33,3 @@ function renderRoutes(history) {
     </Router>
   )
 }
-
-const router = ReactRouter.create({
-  routes: routes,
-  location: ReactRouter.HistoryLocation
-});
-
-router.run(function (Handler, state) {
-  React.render(<Handler/>, document.getElementById("app-container"));
-});
