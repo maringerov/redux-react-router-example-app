@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import RouteHandler from 'react-router';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Content from './Content';
@@ -11,11 +12,13 @@ export default class Main {
   }
 
   render() {
+    let { blogposts } = this.props;
+
     return (
       <div style={styles.main}>
         <Header />
-        <Sidebar blogpostsPreview={this.props.blogposts}/>
-        <Content />
+        <Sidebar blogpostsPreview={blogposts}/>
+        <RouteHandler />
         <Footer />
       </div>
     );

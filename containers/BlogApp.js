@@ -8,7 +8,9 @@ import * as BlogActions from '../actions/BlogActions';
 export default class BlogApp extends Component {
   render() {
     return (
-      <Connector select={state => ({ blogposts: state.blogposts })}>
+      <Connector select={state => ({
+          blogposts: state.blogposts
+        })}>
         {this.renderChild}
       </Connector>
     );
