@@ -15,3 +15,10 @@ export default function removePost(id) {
     id
   }
 }
+
+export default function getPost(post) {
+  return {
+    type: types.GET_POST,
+    post
+  }
+}

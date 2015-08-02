@@ -2,15 +2,15 @@ import React, { PropTypes } from 'react';
 
 export default class Sidebar {
   static propTypes = {
-    blogpostsPreview: PropTypes.array.isRequired
+    blogposts: PropTypes.array.isRequired
   }
 
   render() {
-    let { blogpostsPreview } = this.props
+    let { blogposts } = this.props
     return (
       <div style={styles.sidebar}>
         <ul>
-          { blogpostsPreview = blogpostsPreview.map((post, i) =>
+          { blogposts = blogposts.map((post, i) =>
             <li key={i}>
               <h3>{post.title}</h3>
               <span>{post.intro}</span>

@@ -1,4 +1,4 @@
-import { ADD_POST, REMOVE_POST } from '../constants/ActionTypes';
+import { ADD_POST, REMOVE_POST, GET_POST } from '../constants/ActionTypes';
 
 const initialState = [{
   id: 2,
@@ -20,6 +20,12 @@ const initialState = [{
 
 export default function blogposts(state = initialState, action) {
   switch (action.type) {
+
+  case GET_POST:
+    return state.filter(blogpost =>
+      blogpost.id === this.props.params.postId
+    );
+
   case ADD_POST:
     return [{
       id: (state.length === 0) ? 0 : state[0].id + 1,
